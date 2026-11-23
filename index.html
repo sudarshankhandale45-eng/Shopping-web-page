@@ -1,0 +1,545 @@
+<!doctype html>
+<html>
+	<head>
+		<title>
+			Event-Listeners Web
+		</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<header class="w-full bg-white">
+			<nav class="border-b border-slate-200" aria-label="Main navigation">
+				<div class="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+					<a href="#" class="flex items-center gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded-lg">
+						<span class="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-700 text-white font-bold">$</span>
+						<span class="text-lg font-bold tracking-tight text-slate-900">Shoppers</span>
+					</a>
+			
+					<ul class="hidden items-center gap-1 lg:flex">
+						<li>
+						<a href="#" aria-current="page" class="rounded-lg px-3.5 py-2 text-sm font-semibold text-blue-700 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
+							Home
+						</a>
+						</li>
+						<li>
+						<a href="#" class="rounded-lg px-3.5 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-50 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
+							About
+						</a>
+						</li>
+						<li>
+						<a href="#" class="rounded-lg px-3.5 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-50 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
+							Shop
+						</a>
+						</li>
+						<li>
+						<a href="#" class="rounded-lg px-3.5 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-50 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
+							New Arrivals
+						</a>
+						</li>
+						<li>
+						<a href="#" class="rounded-lg px-3.5 py-2 text-sm font-medium text-slate-600 transition-colors duration-200 hover:bg-slate-50 hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
+							Contact
+						</a>
+						</li>
+					</ul>
+			
+					<div class="flex items-center gap-3">
+						<a href="#" class="hidden rounded-lg px-3.5 py-2 text-sm font-semibold text-slate-700 transition-colors duration-200 hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 sm:inline-flex">
+							Sign In
+						</a>
+						<a href="#" class="hidden items-center justify-center rounded-lg bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm shadow-blue-700/20 transition-all duration-200 hover:bg-blue-800 hover:shadow-md hover:shadow-blue-700/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 sm:inline-flex">
+							Sign up
+						</a>
+					</div>
+				</div>
+			</nav>
+			<div style="display:none;" class="absolute left-138 top-13 rounded-lg text-medium font-semibold text-blue-700 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600" id="dropdown">
+				<p>About</p>
+				<p>Shop</p>
+				<p>New Arrivals</p>
+				<p>Contact</p>
+			</div>
+		</header>
+		
+		<main>
+			<section class="grid grid-cols-2 gap-4 mt-10 mx-auto" style="background-color:#DDD7D3;">
+				<div>
+					<img src="https://images.pexels.com/photos/19090/pexels-photo.jpg?cs=srgb&dl=pexels-webdonut-19090.jpg&fm=jpg">
+				</div>
+				<div class="flex flex-col justify-center items-center">
+					<h1 class="text-5xl font-bold mb-5">
+						Finding Your <br>Perfect Shoes
+					</h1>
+					<p class="text-center text-lg text-base/8 w-90 mb-5">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.
+					</p>
+					<button class="bg-blue-500 p-2 text-white rounded-lg">
+						Shop Now
+					</button>
+				</div>
+			</section>
+			
+			<section class="grid grid-cols-3 gap-4 mt-10 justify-items-center mb-10 border-b-1">
+				<div class="flex gap-7">
+					<i class="ri-truck-fill text-6xl" style="color:#7971EA"></i>
+					<div>
+						<h1 class="text-lg mb-2">
+							FREE SHIPPING
+						</h1>
+						<p class="w-60 text-base/7"style="color:#8C92A0">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.
+						</p>
+					</div>
+				</div>
+				<div class="flex gap-7">
+					<i class="ri-arrow-go-back-fill text-6xl" style="color:#7971EA"></i>
+					<div>
+						<h1 class="text-lg mb-2">
+							FREE RETURNS
+						</h1>
+						<p class="w-60 text-base/7"style="color:#8C92A0">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.
+						</p>
+					</div>
+				</div>
+				<div class="flex gap-7 mb-10">
+					<i class="ri-question-fill text-6xl" style="color:#7971EA"></i>
+					<div>
+						<h1 class="text-lg mb-2">
+							CUSTOMER SUPPORT
+						</h1>
+						<p class="w-60 text-base/7" style="color:#8C92A0">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.
+						</p>
+					</div>
+				</div>
+			</section>
+			
+			<h1 class="text-center text-5xl">
+				<span class="border-b-1">About Us</span>
+			</h1>
+			<section class="flex justify-center items-center p-25 gap-30 border-b-1">
+				<div>
+					<img src="https://preview.colorlib.com/theme/shoppers/images/blog_1.jpg" class="h-90 w-130 rounded-lg">
+				</div>
+				<div class="flex flex-col justify-center">
+					<h1 class="text-4xl mb-5">
+						How We Started
+					</h1>
+					<p class=" text-base/8 w-100 mb-5">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius repellat, dicta at laboriosam, nemo exercitationem itaque eveniet architecto cumque, deleniti commodi molestias repellendus quos sequi hic fugiat asperiores illum. Atque, in, fuga excepturi corrupti error corporis aliquam unde nostrum quas.<br>
+						Accusantium dolor ratione maiores est deleniti nihil? Dignissimos est, sunt nulla illum autem in, quibusdam cumque recusandae, laudantium minima repellendus.
+					</p>
+				</div>
+			</section>
+			
+			<h1 class="text-3xl text-center mt-27 mb-10">
+				<span class="border-b-1">Shop All</span>
+			</h1>
+			<div class="grid grid-cols-3 justify-items-center">
+				<div class="border mb-5">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/shoe_1.jpg" class="h-80 w-100 mb-5">
+						<h1 class="text-2xl mb-2 text-center" style="color:#7971EA">
+							Corater
+						</h1>
+						<p style="color:#8C92A0" class="text-center mb-2">
+							Finding perfect products
+						</p>
+						<p class="text-xl text-center" style="color:#7971EA">
+							$50
+						</p>
+				</div>
+				<div class="border mb-5">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/cloth_2.jpg" class="h-80 w-100 mb-5">
+						<h1 class="text-2xl mb-2 text-center" style="color:#7971EA">
+							Polo Shirt
+						</h1>
+						<p style="color:#8C92A0" class="text-center mb-2">
+							Finding perfect products
+						</p>
+						<p class="text-xl text-center" style="color:#7971EA">
+							$50
+						</p>
+				</div>
+				<div class="border mb-5">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/cloth_3.jpg" class="h-80 w-100 mb-5">
+						<h1 class="text-2xl mb-2 text-center" style="color:#7971EA">
+							T-Shirt Mockup
+						</h1>
+						<p style="color:#8C92A0" class="text-center mb-2">
+							Finding perfect products
+						</p>
+						<p class="text-xl text-center mb-5" style="color:#7971EA">
+							$50
+						</p>
+				</div>
+			</div>
+			
+			<div class="grid grid-cols-3 justify-items-center mt-10">
+				<div class="border mb-5">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/shoe_1.jpg" class="h-80 w-100 mb-5">
+						<h1 class="text-2xl mb-2 text-center" style="color:#7971EA">
+							Corater
+						</h1>
+						<p style="color:#8C92A0" class="text-center mb-2">
+							Finding perfect products
+						</p>
+						<p class="text-xl text-center" style="color:#7971EA">
+							$50
+						</p>
+				</div>
+				<div class="border mb-5">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/cloth_2.jpg" class="h-80 w-100 mb-5">
+						<h1 class="text-2xl mb-2 text-center" style="color:#7971EA">
+							Polo Shirt
+						</h1>
+						<p style="color:#8C92A0" class="text-center mb-2">
+							Finding perfect products
+						</p>
+						<p class="text-xl text-center" style="color:#7971EA">
+							$50
+						</p>
+				</div>
+				<div class="border mb-5">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/cloth_3.jpg" class="h-80 w-100 mb-5">
+						<h1 class="text-2xl mb-2 text-center" style="color:#7971EA">
+							T-Shirt Mockup
+						</h1>
+						<p style="color:#8C92A0" class="text-center mb-2">
+							Finding perfect products
+						</p>
+						<p class="text-xl text-center mb-5" style="color:#7971EA">
+							$50
+						</p>
+				</div>
+			</div>
+			
+			<h1 class="text-4xl mt-10 text-center">
+				<span class="border-b-1">New Arrivals</span>
+			</h1>
+			<div class="grid grid-cols-3 justify-items-center mt-15 mb-15">
+				<div class="relative">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/women.jpg" class="h-130">
+					<div class="absolute bottom-4 left-5">
+						<span class="text-xs font-bold">
+							COLLECTIONS
+						</span>
+						<h1 class="text-4xl font-bold">
+							Women
+						</h1>
+					</div>
+				</div>
+				<div class="relative">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/children.jpg" class="h-130">
+					<div class="absolute bottom-4 left-5">
+						<span class="text-xs font-bold">
+							COLLECTIONS
+						</span>
+						<h1 class="text-4xl font-bold">
+							Children
+						</h1>
+					</div>
+				</div>
+				<div class="relative">
+					<img src="https://preview.colorlib.com/theme/shoppers/images/men.jpg" class="h-130">
+					<div class="absolute bottom-4 left-5">
+						<span class="text-xs font-bold">
+							COLLECTIONS
+						</span>
+						<h1 class="text-4xl font-bold">
+							Men
+						</h1>
+					</div>
+				</div>
+			</div>
+			<hr>
+			
+			<h1 class="text-4xl mt-20 text-center mb-15">
+				<span class="border-b-1">Contact us</span>
+			</h1>
+			<section class="px-4 md:px-6 py-6 mb-10">
+				<div class="grid md:grid-cols-2 items-start gap-16 mx-auto max-w-5xl">
+					<div>
+						<div class="mb-12">
+							<h2 class="text-3xl font-bold text-slate-900 mb-6 md:text-4xl">
+							Let's Talk
+							</h2>
+							<p class="text-base leading-relaxed text-slate-600">
+							Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your
+							project and provide help.
+							</p>
+						</div>
+				
+						<div class="mt-12">
+							<h3 class="text-slate-900 text-base font-semibold">Email</h3>
+							<ul class="mt-4">
+							<li class="flex items-center">
+								<div class="flex items-center bg-slate-200 w-8 h-8 p-2 rounded-full">
+									<svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-slate-600"
+										stroke="currentColor" viewBox="0 0 682.667 682.667" aria-hidden="true">
+										<defs>
+										<clipPath id="a" clipPathUnits="userSpaceOnUse">
+											<path d="M0 512h512V0H0Z" data-original="#000000" />
+										</clipPath>
+										</defs>
+										<g clip-path="url(#a)" transform="matrix(1.33 0 0 -1.33 0 682.667)">
+										<path fill="none" stroke-miterlimit="10" stroke-width="40"
+											d="M452 444H60c-22.091 0-40-17.909-40-40v-39.446l212.127-157.782c14.17-10.54 33.576-10.54 47.746 0L492 364.554V404c0 22.091-17.909 40-40 40Z"
+											data-original="#000000" />
+										<path
+											d="M472 274.9V107.999c0-11.027-8.972-20-20-20H60c-11.028 0-20 8.973-20 20V274.9L0 304.652V107.999c0-33.084 26.916-60 60-60h392c33.084 0 60 26.916 60 60v196.653Z"
+											data-original="#000000" />
+										</g>
+									</svg>
+								</div>
+								<a href="#" class="text-sm ml-4">
+									<small class="block text-slate-900">Mail</small>
+									<span class="font-semibold text-blue-600">info@example.com</span>
+								</a>
+							</li>
+							</ul>
+						</div>
+				
+						<div class="mt-8">
+							<h3 class="text-slate-900 text-base font-semibold">Socials</h3>
+							<ul class="flex flex-wrap gap-4 mt-4">
+							<li>
+								<a href="#"
+									class="flex items-center bg-slate-200 w-8 h-8 p-2 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+									aria-label="Facebook">
+									<svg xmlns="http://www.w3.org/2000/svg" class="size-full fill-slate-600"
+										viewBox="0 0 155.139 155.139" aria-hidden="true">
+										<path
+										d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761z"
+										data-original="#010002" />
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#"
+									class="flex items-center bg-slate-200 w-8 h-8 p-2 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+									aria-label="LinkedIn">
+									<svg xmlns="http://www.w3.org/2000/svg" class="size-full fill-slate-600"
+										viewBox="0 0 24 24" aria-hidden="true">
+										<path
+										d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0"
+										data-original="#000000" />
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#"
+									class="flex items-center bg-slate-200 w-8 h-8 p-2 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+									aria-label="X">
+									<svg xmlns="http://www.w3.org/2000/svg" class="size-full fill-slate-600"
+										viewBox="0 0 1226.37 1226.37" aria-hidden="true">
+										<path
+										d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
+										data-original="#000000" />
+									</svg>
+								</a>
+							</li>
+							</ul>
+						</div>
+					</div>
+			
+					<form class="space-y-4">
+						<div>
+							<label for="name"
+							class="mb-2 text-slate-900 font-medium text-sm inline-block">Name</label>
+							<input type="text" name="name" placeholder="John doe"
+							class="px-3 py-2.5 text-sm text-slate-900 w-full rounded-md bg-white outline-1 -outline-offset-1 outline-slate-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600" />
+						</div>
+						<div>
+							<label for="email"
+							class="mb-2 text-slate-900 font-medium text-sm inline-block">Email</label>
+							<input type="email" name="email" placeholder="john@readymadeui.com"
+							class="px-3 py-2.5 text-sm text-slate-900 w-full rounded-md bg-white outline-1 -outline-offset-1 outline-slate-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600" />
+						</div>
+						<div>
+							<label for="phone" class="mb-2 text-slate-900 font-medium text-sm inline-block">Phone
+							number</label>
+							<input type="number" name="phone" placeholder="+11800-259-854"
+							class="px-3 py-2.5 text-sm text-slate-900 w-full rounded-md bg-white outline-1 -outline-offset-1 outline-slate-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600" />
+						</div>
+						<div>
+							<label for="message"
+							class="mb-2 text-slate-900 font-medium text-sm inline-block">Message</label>
+							<textarea placeholder="Write message" rows="6" type="text" id="message" name="message"
+							class="px-3 py-2.5 text-sm text-slate-900 w-full rounded-md bg-white outline-1 -outline-offset-1 outline-slate-300 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600"></textarea>
+						</div>
+				
+						<button type="submit"
+							class="py-2.5 px-4 text-sm rounded-md font-semibold cursor-pointer text-white border border-blue-600 bg-blue-600 hover:bg-blue-700 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">Send
+							message</button>
+					</form>
+				</div>
+			</section>
+		</main>
+		
+		<footer class="bg-white pt-16 pb-8 px-4 md:px-8 border">
+			<div class="max-w-7xl mx-auto">
+				<div class="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-6 sm:gap-x-8">
+					<div class="lg:flex lg:items-center">
+						<a href="#" class="text-6xl font-bold tracking-tight text-slate-900" style="color:#017BFE;">
+						Shoppers
+						</a>
+					</div>
+			
+					<div class="lg:flex lg:items-center">
+						<ul class="flex flex-wrap gap-6">
+						<li>
+							<a href="#"
+								class="flex items-center bg-slate-200 w-8 h-8 p-2 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+								aria-label="Facebook">
+								<svg xmlns="http://www.w3.org/2000/svg" class="size-full fill-slate-600"
+									viewBox="0 0 155.139 155.139" aria-hidden="true">
+									<path
+									d="M89.584 155.139V84.378h23.742l3.562-27.585H89.584V39.184c0-7.984 2.208-13.425 13.67-13.425l14.595-.006V1.08C115.325.752 106.661 0 96.577 0 75.52 0 61.104 12.853 61.104 36.452v20.341H37.29v27.585h23.814v70.761z"
+									data-original="#010002" />
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="flex items-center bg-slate-200 w-8 h-8 p-2 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+								aria-label="LinkedIn">
+								<svg xmlns="http://www.w3.org/2000/svg" class="size-full fill-slate-600"
+									viewBox="0 0 24 24" aria-hidden="true">
+									<path
+									d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 0 0 2.882 0"
+									data-original="#000000" />
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="flex items-center bg-slate-200 w-8 h-8 p-2 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+								aria-label="X">
+								<svg xmlns="http://www.w3.org/2000/svg" class="size-full fill-slate-600"
+									viewBox="0 0 1226.37 1226.37" aria-hidden="true">
+									<path
+									d="M727.348 519.284 1174.075 0h-105.86L680.322 450.887 370.513 0H13.185l468.492 681.821L13.185 1226.37h105.866l409.625-476.152 327.181 476.152h357.328L727.322 519.284zM582.35 687.828l-47.468-67.894-377.686-540.24H319.8l304.797 435.991 47.468 67.894 396.2 566.721H905.661L582.35 687.854z"
+									data-original="#000000" />
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="flex items-center bg-slate-200 w-8 h-8 p-2 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+								aria-label="Github">
+								<svg xmlns="http://www.w3.org/2000/svg" class="size-full fill-slate-600"
+									viewBox="0 0 438.549 438.549" aria-hidden="true">
+									<path
+									d="M409.132 114.573q-29.41-50.392-79.798-79.8C295.736 15.166 259.057 5.365 219.271 5.365c-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8Q0 164.966 0 224.63c0 47.78 13.94 90.745 41.827 128.906q41.827 57.245 108.063 79.227c5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562q0-.855-.144-15.417a2550 2550 0 0 1-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999q-10.28-1.848-19.13-8.559c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559q-6.139-7.995-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429q-1.712-1.996-2.568-3.997-.86-2.002 1.427-3.289c1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851q8.42 5.71 13.846 14.842c4.38 7.806 9.657 13.754 15.846 17.847q9.277 6.138 18.699 6.136 9.42-.001 16.274-1.423 6.848-1.43 12.847-4.285 2.57-19.135 13.988-29.41c-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979q-5.852-18.56-5.852-42.826c0-23.035 7.52-42.637 22.557-58.817q-10.566-25.977 1.997-58.24c5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994s9.089 5.618 12.135 7.708q26.556-7.42 54.818-7.421c28.262-.001 37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979q-9.286 11.282-23.131 18.986c-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146q14.841 12.845 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995q66.244-21.98 108.068-79.226c27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049"
+									data-original="#000000" />
+								</svg>
+							</a>
+						</li>
+						</ul>
+					</div>
+			
+					<div>
+						<h3 class="text-slate-900 font-semibold text-sm mb-6">Useful links</h3>
+						<ul class="space-y-4 text-slate-600 text-sm font-normal">
+						<li>
+							<a href="#"
+								class="hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded transition-all">Featured</a>
+						</li>
+						<li>
+							<a href="#"
+								class="hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded transition-all">New
+								Arrivals</a>
+						</li>
+						<li>
+							<a href="#"
+								class="hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded transition-all">New
+								Arrivals</a>
+						</li>
+						</ul>
+					</div>
+			
+					<div>
+						<h3 class="text-slate-900 font-semibold text-sm mb-6">Information</h3>
+						<ul class="space-y-4 text-slate-600 text-sm font-normal">
+						<li>
+							<a href="#"
+								class="hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded transition-all">About
+								Us</a>
+						</li>
+						<li>
+							<a href="#"
+								class="hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded transition-all">Terms
+								&amp; Conditions</a>
+						</li>
+						<li>
+							<a href="#"
+								class="hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded transition-all">Privacy
+								Policy</a>
+						</li>
+						<li>
+							<a href="#"
+								class="hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded transition-all">Sale</a>
+						</li>
+						<li>
+							<a href="#"
+								class="hover:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded transition-all">Documentation</a>
+						</li>
+						</ul>
+					</div>
+				</div>
+			
+				<p class="text-slate-600 text-sm mt-8">© Shoppers. All rights reserved.
+				</p>
+			</div>
+		</footer>
+
+		<script>
+			
+			let dropdown = document.getElementById('dropdown'); 
+			
+			window.addEventListener('keydown', function(event){
+				
+				if(event.ctrlKey && event.key == 'f'){
+					event.preventDefault(event);
+					if(dropdown.style.display === 'none'){
+						dropdown.style.display = 'block';
+					}
+					else{
+						dropdown.style.display = 'none';
+					}
+				}
+				
+				if(event.ctrlKey && event.key == 'h'){
+					event.preventDefault(event);
+					window.open('event-listeners-task.html');
+				}
+				
+				if(event.ctrlKey && event.key == 'a'){
+					event.preventDefault(event);
+					window.open('event-listeners-aboutpage.html');
+				}
+				
+				if(event.ctrlKey && event.key == 's'){
+					event.preventDefault(event);
+					window.open('event-listeners-shoppage.html');
+				}
+				
+				if(event.ctrlKey && event.key == 'd'){
+					event.preventDefault(event);
+					window.open('event-listeners-newpage.html');
+				}
+				
+				if(event.ctrlKey && event.key == 'c'){
+					event.preventDefault(event);
+					window.open('event-listeners-contactpage.html');
+				}
+			
+			})
+			
+		</script>
+	</body>
+</html>
